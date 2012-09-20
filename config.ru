@@ -1,7 +1,8 @@
+require 'bundler/setup'
 require 'sinatra'
 
-get '/' do
-  "This will be the website for the morning-pages gem.\n\nSee http://github.com/chrismdp/morning-pages"
-end
+Bundler.require :default, Sinatra::Application.environment
 
-run Sinatra::Application
+require 'app'
+
+run App
