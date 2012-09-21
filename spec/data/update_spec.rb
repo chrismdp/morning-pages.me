@@ -3,7 +3,7 @@ require 'update'
 
 module MorningPages
   describe Update do
-    let(:params) {{ :count => 2, :average_length => 2.5 }}
+    let(:params) {{ :count => "2", :average_length => "2.5" }}
 
     it "must have word count" do
       Update.new(params.except(:count)).should_not be_valid

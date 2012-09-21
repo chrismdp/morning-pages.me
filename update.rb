@@ -4,6 +4,7 @@ module MorningPages
     include Mongoid::Timestamps
 
     field :count, :type => Fixnum
+    field :average_length, :type => Float
 
     validates_presence_of :count
 
