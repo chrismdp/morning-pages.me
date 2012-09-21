@@ -7,4 +7,4 @@ $: << File.dirname(__FILE__) + '/'
 
 require 'app'
 
-run App
+run MorningPages::App

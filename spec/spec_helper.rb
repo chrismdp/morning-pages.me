@@ -13,7 +13,7 @@ require 'app'
 
 set :views, File.dirname(__FILE__) + '/../views'
 
-Capybara.app = App
+Capybara.app = MorningPages::App
 Mongoid.load!("config/mongoid.yml", Sinatra::Application.environment)
 
 require 'database_cleaner'
