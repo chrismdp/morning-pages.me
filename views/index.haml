@@ -1,28 +1,45 @@
-%h1 Morning Pages
-%p
-  Usage:
-  %ol
-    %li
-      Install the morning pages gem using:
-      %br
-      %br
-      gem install morning-pages
-      %br
-      %br
-    %li
-      Type your words using your $EDITOR.
-      %a{:href => 'http://paperartstudio.tripod.com/artistsway/id3.html'}
-        Try and get to 750 words (that's about three pages.)
-    %li
-      When you are done for the moment, quit your editor. Your progress will automatically be uploaded here.
-    %li
-      %b Coming soon:
-      Lots of lovely stats and leaderboards. We're collecting stats now, so as we add reporting to the website, your historical stats will show up.
+!!! 5
+%head
+  %title Morning Pages
+  :javascript
+    var _kmq = _kmq || [];
+    var _kmk = _kmk || '1dbb07c465f3ef8d3e17178674a8a85ff6594782';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+%body
+  %h1 Morning Pages
+  %p
+    Usage:
+    %ol
+      %li
+        Install the morning pages gem using:
+        %br
+        %br
+        gem install morning-pages
+        %br
+        %br
+      %li
+        Type your words using your $EDITOR.
+        %a{:href => 'http://paperartstudio.tripod.com/artistsway/id3.html'}
+          Try and get to 750 words (that's about three pages.)
+      %li
+        When you are done for the moment, quit your editor. Your progress will automatically be uploaded here.
+      %li
+        %b Coming soon:
+        Lots of lovely stats and leaderboards. We're collecting stats now, so as we add reporting to the website, your historical stats will show up.
 
-%p
-  by
-  %a{:href => 'http://chrismdp.com'} chrismdp
+  %p
+    by
+    %a{:href => 'http://chrismdp.com'} chrismdp
 
-%p
-  &copy;
-  = Time.now.year
+  %p
+    &copy;
+    = Time.now.year
