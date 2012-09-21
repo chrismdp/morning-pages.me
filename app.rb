@@ -17,8 +17,10 @@ module MorningPages
       rescue
         halt 401
       end
-      user.updates << Update.new(params)
-      user.save
+      update = Update.new(params)
+      halt 406 unless update.valid?
+      user.updates << update
+      "OK"
     end
   end
 end

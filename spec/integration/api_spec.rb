@@ -11,6 +11,7 @@ feature "Api" do
 
   def register
     post '/api/register', :username => 'foo', :email => 'foo@example.com'
+    MorningPages::User.last
   end
 
 
@@ -37,16 +38,24 @@ feature "Api" do
   end
 
   scenario "User posts stats" do
-    register
-    user = MorningPages::User.last
+    user = register
     expect {
       send_stats(user.key)
     }.to change { MorningPages::User.last.updates.count }.by(1)
+    last_response.body.should == "OK"
   end
 
   scenario "User cannot post without correct key" do
     send_stats("foo")
     last_response.status.should == 401
+  end
+
+  scenario "User must post count" do
+    user = register
+    expect {
+      post '/api/stats', :key => user.key, :average_length => '3.4'
+    }.not_to change { MorningPages::User.last.updates.count }
+    last_response.status.should == 406
   end
 end
 
