@@ -38,8 +38,9 @@
 
   %p
     by
-    %a{:href => 'http://chrismdp.com'} chrismdp
-
+    %a#blogLink{:href => 'http://chrismdp.com'} chrismdp
+    :javascript
+      _kmq.push(['trackClickOnOutboundLink', 'blogLink', 'Visited Blog']);
   %p
     &copy;
     = Time.now.year
