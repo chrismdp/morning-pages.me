@@ -4,6 +4,11 @@ module MorningPages
       haml :index
     end
 
+    get '/css/screen.css' do
+      content_type "text/css"
+      scss :screen
+    end
+
     post '/api/register' do
       user = User.new(params)
       halt 406 unless user.valid?
