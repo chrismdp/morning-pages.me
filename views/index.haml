@@ -35,39 +35,51 @@
     _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
 %body
   .container
-    .panel
+    .span8
       %h1 Morning Pages
-      %p
-        Usage:
-        %ol
-          %li
-            Install the morning pages gem using:
-            %br
-            %br
+      %h3 usage
+      %ol
+        %li
+          Install the morning pages gem:
+          %br
+          %br
+          %pre
             gem install morning-pages
-            %br
-            %br
-          %li
-            Type your words using your $EDITOR.
-            %a{:href => 'http://paperartstudio.tripod.com/artistsway/id3.html'}
-              Try and get to 750 words (that's about three pages.)
-          %li
-            When you are done for the moment, quit your editor. Your progress will automatically be uploaded here.
-          %li
-            %b Coming soon:
-            Lots of lovely stats and leaderboards. We're collecting stats now, so as we add reporting to the website, your historical stats will show up.
-          %li
-            The entire project is open source: feel free to contribute to
-            %a{:href => "http://github.com/chrismdp/morning-pages"} the gem
-            or provide some reporting for
-            %a{:href => "http://github.com/chrismdp/morning-pages"} the website
-            should you wish to.
+          %br
+        %li
+          Type your words using your
+          %a{:href => 'http://en.wikibooks.org/wiki/Guide_to_Unix/Environment_Variables#EDITOR'} $EDITOR.
+          Try and get to 750 words: that's about
+          %a{:href => 'http://paperartstudio.tripod.com/artistsway/id3.html'}
+            three pages.
+        %li
+          When you are done for the moment, quit your editor. Your progress will automatically be uploaded here.
+        %li
+          %b Coming soon:
+          Lots of lovely stats and leaderboards. We're collecting stats now, so as we add reporting to the website, your historical stats will show up.
+        %li
+          The entire project is open source: feel free to contribute to
+          %a{:href => "http://github.com/chrismdp/morning-pages"} the gem
+          or provide some reporting for
+          %a{:href => "http://github.com/chrismdp/morning-pages"} the website
+          should you wish to.
+      %h3 why?
+      %p
+        I've been using the excellent
+        %a{:href => 'http://750words.com'} 750words.com
+        for some years, but decided I wanted to keep my words offline on my laptop. I needed:
+        %ul
+          %li an easy way of editing a new file for each day
+          %li motivational statistics that were published to the internet, to keep me accountable.
+        The morning-pages gem was born.
+      %h3 about
+
       %p
         by
         %a#blogLink{:href => 'http://chrismdp.com'} chrismdp
         %br
         :javascript
           _kmq.push(['trackClickOnOutboundLink', 'blogLink', 'Visited Blog']);
-    %p
-      &copy;
-      = Time.now.year
+      %p
+        &copy;
+        = Time.now.year
