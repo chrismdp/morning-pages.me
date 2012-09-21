@@ -8,6 +8,8 @@ module MorningPages
       user = User.new(params)
       halt 406 unless user.valid?
       user.save!
+
+      content_type "application/json"
       user.to_json
     end
 

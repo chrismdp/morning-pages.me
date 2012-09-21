@@ -27,6 +27,11 @@ feature "Api" do
     JSON.parse(last_response.body)['key'].should == user.key
   end
 
+  scenario "Registration returns json" do
+    register
+    last_response.header["Content-type"].should match(%r{application/json})
+  end
+
   scenario "User already registered" do
     register
     register
