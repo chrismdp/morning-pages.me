@@ -3,7 +3,6 @@ require 'sinatra'
 
 Bundler.require :default, Sinatra::Application.environment
 Mongoid.load!("config/mongoid.yml", Sinatra::Application.environment)
-p  Sinatra::Application.environment
 
 $: << File.dirname(__FILE__) + '/'
 

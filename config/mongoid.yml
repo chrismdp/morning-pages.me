@@ -11,4 +11,6 @@ test:
       hosts:
         - localhost:27017
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
